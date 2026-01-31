@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   users-service:
+    image: users-service:latest
     build: ./users-service
     container_name: users-service
     ports:
@@ -9,6 +10,7 @@ services:
     restart: unless-stopped
 
   academic-service:
+    image: academic-service:latest
     build: ./academic-service
     container_name: academic-service
     ports:
@@ -16,6 +18,7 @@ services:
     restart: unless-stopped
 
   api-gateway:
+    image: api-gateway:latest
     build: ./api-gateway
     container_name: api-gateway
     ports:

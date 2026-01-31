@@ -46,14 +46,14 @@ jobs:
     - name: Trivy scan users-service
       uses: aquasecurity/trivy-action@0.20.0
       with:
-        image-ref: users-service
+        image-ref: users-service:latest
         severity: CRITICAL,HIGH
         exit-code: 1
     # Seguridad – Trivy academic-service
     - name: Trivy scan academic-service
       uses: aquasecurity/trivy-action@0.20.0
       with:
-       image-ref: academic-service
+       image-ref: academic-service:latest
        severity: CRITICAL,HIGH
        exit-code: 1
 
@@ -61,7 +61,7 @@ jobs:
     - name: Trivy scan api-gateway
       uses: aquasecurity/trivy-action@0.20.0
       with:
-        image-ref: api-gateway
+        image-ref: api-gateway:latest
         severity: CRITICAL,HIGH
         exit-code: 1
 
